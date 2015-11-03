@@ -1,6 +1,17 @@
 <!doctype html>
-<html lang="en">
-<!-- kommentar -->
+<html lang="de">
+<!--
+
+Keyboard shortcuts:
+
+Up, Down, Left, Right: Navigation
+f: Full-screen
+s: Show slide notes
+o: Toggle overview
+. (Period or b: Turn screen black
+Esc: Escape from full-screen, or toggle overview
+
+-->
 <head>
     <meta charset="utf-8">
 
@@ -37,31 +48,75 @@
     <div class="slides">
 
         <section>
-            <h2>CODELAB: Hands-on Performance - Eine Einführung in Web Performance</h2>
+            <h2>CODELAB: Hands-on Performance</h2>
+
+            <h3>Eine Einführung in Web Performance</h3>
 
             <p>
-                <a href="">Frank Thelen</a> | <a href="">blubb</a>
+                <a href="mailto:frank.thelen@telefonica.com">Frank Thelen</a> | <a href="http://www.o2online.de">O<sub>2</sub>
+                / Telefónica</a>
             </p>
 
             <p>
-                <a href="">Jan Weinschenker</a> | <a href="http://www.holisticon.de">http://www.holisticon.de</a>
+                <a href="mailto:jan.weinschenker@holisticon.de">Jan Weinschenker</a> | <a
+                    href="http://www.holisticon.de">http://www.holisticon.de</a>
             </p>
 
             <p>
                 <a href="mailto:oliver.ochs@holisticon.de">Oliver Ochs</a> | <a href="http://www.holisticon.de">http://www.holisticon.de</a>
             </p>
         </section>
-
         <section>
-            <h2>Inhalte</h2>
-            <ul>
-                <li class="fragment">bla
-                <li class="fragment">blubb
-                <li class="fragment">Module
-                <li class="fragment">afrawefda
-                <li class="fragment"><strike>asfasdfasdfa</strike>
-                <li class="fragment">asdfadsfdfs
-            </ul>
+
+            <section>
+                <h2>Inhalte</h2>
+                <ul>
+                    <li class="fragment">Einführung</li>
+                    <li class="fragment">Google Chrome Dev Tools</li>
+                    <li class="fragment">Google PageSpeed Insights</li>
+                    <li class="fragment">WebPageTest</li>
+                    <li class="fragment">Ausblick</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>Google Chrome Dev Tools</h2>
+                <ul>
+                    <li class="fragment">Historie</li>
+                    <li class="fragment">Peformance by Design</li>
+                    <li class="fragment">TTFB</li>
+                    <li class="fragment">Hands-On Google Chrome Dev Tools</li>
+                </ul>
+            </section>
+            <section>
+                <h2>Google PageSpeed Insights</h2>
+                <ul>
+
+                    <li class="fragment">Minfizierung / Komprimierung / ImageOptim</li>
+                    <li class="fragment">Konkatenierung / Spriting / Inlining / Redirects</li>
+                    <li class="fragment">Below the fold / Critical Path</li>
+                    <li class="fragment">Hands-On Google PageSpeed Insights</li>
+                </ul>
+            </section>
+            <section>
+                <h2>WebPageTest</h2>
+                <ul>
+                    <li class="fragment">Caching</li>
+                    <li class="fragment">Domain Sharding</li>
+                    <li class="fragment">Content Delivery Networks</li>
+                    <li class="fragment">3rd Party Scripte</li>
+                    <li class="fragment">Hands-On WebPageTest</li>
+
+                </ul>
+            </section>
+            <section>
+                <h2>Ausblick</h2>
+                <ul>
+                    <li class="fragment">HTTP/2</li>
+                    <li class="fragment">Single Page Applications</li>
+                    <li class="fragment">Laufzeitperformance (60fps)</li>
+                </ul>
+            </section>
         </section>
 
         <section>
@@ -106,7 +161,8 @@
                 <li>Server Push: proactive sending assets (like JS and CSS)</li>
                 <li>Header Compression: all the headers are packed into one compressed block to be sent as a unity</li>
                 <li>Binary Instead of Textual Format: less code, easier parsing on the server</li>
-                <li>Exampe: <a href="http://http2.golang.org/gophertiles?latency=30">A grid of 180 tiled images</a></li></li>
+                <li>Exampe: <a href="http://http2.golang.org/gophertiles?latency=30">A grid of 180 tiled images</a></li>
+                </li>
             </ul>
         </section>
     </div>
