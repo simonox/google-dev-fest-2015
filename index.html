@@ -100,9 +100,13 @@
         <section>
             <h2>HTTP/2</h2>
             <ul>
+                <li>Multiplexed Streams: connection is multiplexed</li>
                 <li>single connection requires just one handshake (SSL/TLS)</li>
-                <li>connection is multiplexed</li>
                 <li>no more domain sharding, concatenation, image spriting</li>
+                <li>Server Push: proactive sending assets (like JS and CSS)</li>
+                <li>Header Compression: all the headers are packed into one compressed block to be sent as a unity</li>
+                <li>Binary Instead of Textual Format: less code, easier parsing on the server</li>
+                <li>Exampe: <a href="http://http2.golang.org/gophertiles?latency=30">A grid of 180 tiled images</a></li></li>
             </ul>
         </section>
     </div>
