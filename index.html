@@ -49,6 +49,9 @@ Esc: Escape from full-screen, or toggle overview
             font-size: 1em;
             margin-bottom: 1em;
         }
+        .reveal section li pre {
+            width: inherit;
+        }
         section.overview h2, section.hands-on h2, section.outlook h2, section.qna h2 {
             padding-top: .5em;
         }
@@ -185,13 +188,71 @@ Esc: Escape from full-screen, or toggle overview
             <section>
                 <h2>Browser Caching</h2>
                 <ul>
-                    <li class="fragment">Weniger Traffic + weniger Requests!</li>
+                    <li class="fragment">Weniger Requests!</li>
+                    <li class="fragment">Weniger Traffic!</li>
+                    <li class="fragment">Weniger Betriebskosten!</li>
+                </ul>
+            </section>
+            <section>
+                <h2>Browser Caching</h2>
+                <ul>
+                    <li class="fragment">Strategie 1: Requests vermeiden!</li>
+                    <li class="fragment">
+                        Mit URL Fingerprinting
+                        <pre><code contenteditable data-trim class="nohighlight">
+http://static.bla.de/js/main.min.28101047.js
+                        </code></pre>
+                        <pre><code contenteditable data-trim class="http">
+cache-control: public, max-age=31536000
+expires: Wed, 02 Nov 2016 15:49:00 GMT
+                        </code></pre>
+                    </li>
+                    <li class="fragment">
+                        Ohne URL Fingerprinting
+                        <pre><code contenteditable data-trim class="nohighlight">
+http://bla.de/app/config.json
+http://bla.de/views/footer.html
+                        </code></pre>
+                        <pre><code contenteditable data-trim class="http">
+cache-control: public, max-age=86400
+expires: Wed, 11 Nov 2015 14:55:34 GMT
+                        </code></pre>
+                    </li>
+                    <li class="fragment">Alle statischen Ressourcen</li>
+                </ul>
+            </section>
+            <section>
+                <h2>Browser Caching</h2>
+                <ul>
+                    <li class="fragment">Strategie 2: Traffic vermeiden!</li>
+                    <li class="fragment">
+                        Response-Headers:
+                        <pre><code contenteditable data-trim class="http">
+last-modified: Mon, 05 Oct 2015 10:11:30 GMT
+etag: "0rrdr4ruwpoEkjfZ2WTN0BrU83U="
+                        </code></pre>
+                    </li>
+                    <li class="fragment">
+                        Request-Headers:
+                        <pre><code contenteditable data-trim class="http">
+If-Modified-Since: Mon, 05 Oct 2015 10:11:30 GMT
+If-None-Match: "0rrdr4ruwpoEkjfZ2WTN0BrU83U="
+                        </code></pre>
+                    </li>
+                    <li class="fragment">
+                        Status Code:
+                        <pre><code contenteditable data-trim class="http">
+HTTP/1.1 304 Not Modified
+                        </code></pre>
+                    </li>
+                    <li class="fragment">Alle dynamischen Ressourcen</li>
                 </ul>
             </section>
             <section>
                 <h2>Domain Sharding</h2>
                 <ul>
                     <li class="fragment">Bandbreite ausnutzen!</li>
+                    <li class="fragment">Trade-Off: TCP Connect, SSL Handshake, Slow-Start</li>
                 </ul>
             </section>
             <section>
