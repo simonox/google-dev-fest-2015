@@ -110,17 +110,14 @@ Esc: Escape from full-screen, or toggle overview
         <section>
             <h2>CODELAB: Hands-on Performance</h2>
             <h5>Eine Einführung in Web-Performance</h5>
-
             <p>
                 <a href="mailto:frank.thelen@telefonica.com">Frank Thelen</a> |
                 <a href="http://www.o2online.de">Telefónica O<sub>2</sub></a>
             </p>
-
             <p>
                 <a href="mailto:jan.weinschenker@holisticon.de">Jan Weinschenker</a> |
                 <a href="http://www.holisticon.de">http://www.holisticon.de</a>
             </p>
-
             <p>
                 <a href="mailto:oliver.ochs@holisticon.de">Oliver Ochs</a> |
                 <a href="http://www.holisticon.de">http://www.holisticon.de</a>
@@ -290,8 +287,21 @@ Esc: Escape from full-screen, or toggle overview
             </section>
             <section>
                 <h2>Below the Fold / Critical Path</h2>
+                <img src="assets/criticalpath.png" width="100%" title="http://calendar.perfplanet.com/2012/deciphering-the-critical-rendering-path">
                 <ul>
-                    <li class="fragment">Weniger Inhalt! Später!</li>
+                    <li class="fragment">Bevor der Browser die Seite rendern kann, muss er den DOM und das CSSOM aufbauen.</li>
+                    <li class="fragment">Sowohl das DOM als auch das CSSOM lassen sich durch JS verändern.</li>
+                    <li class="fragment">Daher sollten nicht benötigte Scripte und Stylesheets asynchron geladen werden</li>
+                </ul>
+            </section>
+            <section>
+                <h2>Below the Fold / Critical Path</h2>
+                <ul>
+                    <li class="fragment">Nur das ausliefern, was initial benötigt wird, den Rest später nachladen!</li>
+                    <li class="fragment"><a href="https://developers.google.com/speed/pagespeed/insights/?url=www.spiegel.de" target="_blank">Spiegel.de</a> </li>
+                    <li class="fragment"><a href="https://developers.google.com/speed/pagespeed/insights/?url=www.fcstpauli.de" target="_blank">FC St. Pauli</a> </li>
+                    <li class="fragment"><a href="https://developers.google.com/speed/pagespeed/insights/?url=www.smashingmagazine.com" target="_blank">Smashing Magazine</a> </li>
+                    <li class="fragment"><a href="https://developers.google.com/web/fundamentals/performance/critical-rendering-path/?hl=en">https://developers.google.com/web/fundamentals/performance/critical-rendering-path/?hl=en</a></li>
                 </ul>
             </section>
             <section class="hands-on">
