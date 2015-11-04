@@ -24,7 +24,7 @@ Esc: Escape from full-screen, or toggle overview
 
     <link rel="stylesheet" media="all" href="bower_components/reveal.js/css/reveal.min.css">
 
-    <link rel="stylesheet" media="all" href="css/theme.css" id="theme">
+    <link rel="stylesheet" media="all" href="bower_components/reveal.js/css/theme/blood.css" id="theme">
     <link rel="shortcut icon" href="assets/brand/favicon.png">
 
     <!-- For syntax highlighting -->
@@ -38,6 +38,44 @@ Esc: Escape from full-screen, or toggle overview
     <!--[if lt IE 9]>
     <script src="lib/js/html5shiv.js"></script>
     <![endif]-->
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+
+    <style>
+        .reveal i.fa {
+            font: normal normal normal 14px/1 FontAwesome;
+        }
+        .reveal h2 i.fa {
+            font-size: 1em;
+            margin-bottom: 1em;
+        }
+        section.overview h2, section.hands-on h2, section.outlook h2, section.qna h2 {
+            padding-top: .5em;
+        }
+        section.agenda:before {
+        }
+        section.overview:before {
+            font: normal normal normal 14px/1 FontAwesome;
+            font-size: 2.5em;
+            content: "\f0a1"; // fa-bullhorn
+        }
+        section.hands-on:before {
+            font: normal normal normal 14px/1 FontAwesome;
+            font-size: 2.5em;
+            content: "\f085"; // fa-cogs
+        }
+        section.outlook:before {
+            font: normal normal normal 14px/1 FontAwesome;
+            font-size: 2.5em;
+            content: "\f1e5"; // fa-binoculars
+        }
+        section.qna:before {
+            font: normal normal normal 14px/1 FontAwesome;
+            font-size: 2.5em;
+            content: "\f086"; // fa-comments
+        }
+    </style>
+
 </head>
 
 <body>
@@ -53,8 +91,8 @@ Esc: Escape from full-screen, or toggle overview
             <h3>Eine Einführung in Web Performance</h3>
 
             <p>
-                <a href="mailto:frank.thelen@telefonica.com">Frank Thelen</a> | <a href="http://www.o2online.de">O<sub>2</sub>
-                / Telefónica</a>
+                <a href="mailto:frank.thelen@telefonica.com">Frank Thelen</a> |
+                <a href="http://www.o2online.de">Telefónica O<sub>2</sub></a>
             </p>
 
             <p>
@@ -67,55 +105,114 @@ Esc: Escape from full-screen, or toggle overview
             </p>
         </section>
         <section>
-
-            <section>
+            <section class="agenda">
                 <h2>Inhalte</h2>
                 <ul>
                     <li class="fragment">Einführung</li>
                     <li class="fragment">Google Chrome Dev Tools</li>
                     <li class="fragment">Google PageSpeed Insights</li>
-                    <li class="fragment">WebPageTest</li>
+                    <li class="fragment">WebPageTest (WPT)</li>
                     <li class="fragment">Ausblick</li>
                 </ul>
             </section>
-
-            <section>
+            <section class="overview">
                 <h2>Google Chrome Dev Tools</h2>
                 <ul>
                     <li class="fragment">Historie</li>
                     <li class="fragment">Peformance by Design</li>
                     <li class="fragment">TTFB</li>
-                    <li class="fragment">Hands-On Google Chrome Dev Tools</li>
+                    <li class="fragment hands-on">Hands-On Google Chrome Dev Tools</li>
                 </ul>
             </section>
             <section>
+                <h2>Historie</h2>
+            </section>
+            <section>
+                <h2>Peformance by Design</h2>
+                <ul>
+                    <li class="fragment">Schon beim Design an Performance denken</li>
+                    <li class="fragment">Wen will ich erreichen? Und wen nicht?</li>
+                    <li class="fragment">Performance-Anforderungen formulieren</li>
+                </ul>
+                <aside class="notes">
+                    Google Chrome Dev Tools: Throttle Regular 3G + DSL 2 MB/s, Screenshot Capture
+                </aside>
+            </section>
+            <section>
+                <h2>TTFB</h2>
+            </section>
+            <section class="hands-on">
+                <h2>Hands-On Google Chrome Dev Tools</h2>
+            </section>
+            <section class="overview">
                 <h2>Google PageSpeed Insights</h2>
                 <ul>
-
-                    <li class="fragment">Minfizierung / Komprimierung / ImageOptim</li>
-                    <li class="fragment">Konkatenierung / Spriting / Inlining / Redirects</li>
-                    <li class="fragment">Below the fold / Critical Path</li>
-                    <li class="fragment">Hands-On Google PageSpeed Insights</li>
+                    <li class="fragment">Minifizierung, Komprimierung, Image Optimierung</li>
+                    <li class="fragment">Konkatenierung, Spriting, Inlining, Redirects</li>
+                    <li class="fragment">Below the Fold / Critical Path</li>
+                    <li class="fragment hands-on">Hands-On Google PageSpeed Insights</li>
                 </ul>
             </section>
             <section>
+                <h2>Minifizierung, Komprimierung, Image Optimierung</h2>
+                <ul>
+                    <li class="fragment">Weniger Traffic!</li>
+                </ul>
+            </section>
+            <section>
+                <h2>Konkatenierung, Spriting, Inlining, Redirects</h2>
+                <ul>
+                    <li class="fragment">Weniger Requests!</li>
+                </ul>
+            </section>
+            <section>
+                <h2>Below the Fold / Critical Path</h2>
+            </section>
+            <section class="hands-on">
+                <h2>Hands-On Google PageSpeed Insights</h2>
+            </section>
+            <section class="overview">
                 <h2>WebPageTest</h2>
                 <ul>
-                    <li class="fragment">Caching</li>
+                    <li class="fragment">Browser Caching</li>
                     <li class="fragment">Domain Sharding</li>
                     <li class="fragment">Content Delivery Networks</li>
-                    <li class="fragment">3rd Party Scripte</li>
-                    <li class="fragment">Hands-On WebPageTest</li>
+                    <li class="fragment">3rd-Party Scripte</li>
+                    <li class="fragment hands-on">Hands-On WebPageTest (WPT)</li>
 
                 </ul>
             </section>
             <section>
+                <h2>Browser Caching</h2>
+                <ul>
+                    <li class="fragment">Weniger Traffic + weniger Requests!</li>
+                </ul>
+            </section>
+            <section>
+                <h2>Domain Sharding</h2>
+                <ul>
+                    <li class="fragment">Bandbreite ausnutzen!</li>
+                </ul>
+            </section>
+            <section>
+                <h2>Content Delivery Networks</h2>
+            </section>
+            <section>
+                <h2>3rd-Party Scripte</h2>
+            </section>
+            <section class="hands-on">
+                <h2>Hands-On WebPageTest (WPT)</h2>
+            </section>
+            <section class="outlook">
                 <h2>Ausblick</h2>
                 <ul>
                     <li class="fragment">HTTP/2</li>
                     <li class="fragment">Single Page Applications</li>
                     <li class="fragment">Laufzeitperformance (60fps)</li>
                 </ul>
+            </section>
+            <section class="qna">
+                <h2>Q&amp;A</h2>
             </section>
         </section>
 
