@@ -129,6 +129,8 @@ Esc: Escape from full-screen, or toggle overview
                     <li class="fragment hands-on">Hands-on</li>
                 </ul>
             </section>
+        </section>
+        <section>
             <section>
                 <h2>Historie</h2>
             </section>
@@ -150,6 +152,8 @@ Esc: Escape from full-screen, or toggle overview
                 <h2>Hands-on Google Chrome Dev Tools</h2>
                 <a>Chrome | F12</a>
             </section>
+        </section>
+        <section>
             <section class="overview">
                 <h2>Google PageSpeed Insights</h2>
                 <ul>
@@ -181,6 +185,8 @@ Esc: Escape from full-screen, or toggle overview
                 <h2>Hands-on Google PageSpeed Insights</h2>
                 <a href="https://developers.google.com/speed/pagespeed/insights/">https://developers.google.com/speed/pagespeed/insights/</a>
             </section>
+        </section>
+        <section>
             <section class="overview">
                 <h2>WebPageTest</h2>
                 <ul>
@@ -287,12 +293,27 @@ HTTP/1.1 304 Not Modified
                 <h2>Hands-on WebPageTest</h2>
                 <a href="http://www.webpagetest.org/">http://www.webpagetest.org/</a>
             </section>
+        </section>
+        <section>
             <section class="outlook">
                 <h2>Ausblick</h2>
                 <ul>
                     <li class="fragment">HTTP/2</li>
                     <li class="fragment">Single Page Applications (SPAs)</li>
                     <li class="fragment">Laufzeitperformance (60fps)</li>
+                </ul>
+            </section>
+            <section>
+                <h2>HTTP/2</h2>
+                <ul>
+                    <li>Multiplexed Streams: connection is multiplexed</li>
+                    <li>single connection requires just one handshake (SSL/TLS)</li>
+                    <li>no more domain sharding, concatenation, image spriting</li>
+                    <li>Server Push: proactive sending assets (like JS and CSS)</li>
+                    <li>Header Compression: all the headers are packed into one compressed block to be sent as a unity</li>
+                    <li>Binary Instead of Textual Format: less code, easier parsing on the server</li>
+                    <li>Exampe: <a href="http://http2.golang.org/gophertiles?latency=30">A grid of 180 tiled images</a></li>
+                    </li>
                 </ul>
             </section>
             <section class="qna">
@@ -302,10 +323,10 @@ HTTP/1.1 304 Not Modified
 
         <section>
             <section>
-                <h1>Hello World</h1>
+                <h1>Code Example</h1>
             </section>
             <section>
-                <h2>Hello World Code</h2>
+                <h2>Code Example</h2>
                         <pre><code class="xml" contenteditable>
                             &lt;!DOCTYPE html&gt;
                             &lt;html&gt;
@@ -325,27 +346,9 @@ HTTP/1.1 304 Not Modified
 
                 </aside>
             </section>
-            <section>
-                <h2>Agenda</h2>
-                <img src="assets/agenda.png" width="800px">
-                <br>
 
-                <aside class="notes">Hehe.</aside>
-            </section>
         </section>
-        <section>
-            <h2>HTTP/2</h2>
-            <ul>
-                <li>Multiplexed Streams: connection is multiplexed</li>
-                <li>single connection requires just one handshake (SSL/TLS)</li>
-                <li>no more domain sharding, concatenation, image spriting</li>
-                <li>Server Push: proactive sending assets (like JS and CSS)</li>
-                <li>Header Compression: all the headers are packed into one compressed block to be sent as a unity</li>
-                <li>Binary Instead of Textual Format: less code, easier parsing on the server</li>
-                <li>Exampe: <a href="http://http2.golang.org/gophertiles?latency=30">A grid of 180 tiled images</a></li>
-                </li>
-            </ul>
-        </section>
+
     </div>
 
 
