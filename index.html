@@ -365,7 +365,8 @@ Esc: Escape from full-screen, or toggle overview
                             href="https://developers.google.com/speed/pagespeed/insights/?url=www.smashingmagazine.com"
                             target="_blank">Smashing Magazine</a></li>
                     <li class="fragment"><a
-                            href="https://developers.google.com/web/fundamentals/performance/critical-rendering-path/?hl=en">https://developers.google.com/web/fundamentals/performance/critical-rendering-path/?hl=en</a>
+                            href="https://developers.google.com/web/fundamentals/performance/critical-rendering-path/?hl=en"
+                            target="_blank">https://developers.google.com/web/fundamentals/performance/critical-rendering-path/?hl=en</a>
                     </li>
                 </ul>
             </section>
@@ -404,19 +405,19 @@ Esc: Escape from full-screen, or toggle overview
                             http://static.bla.de/js/main.min.28101047.js
                         </code></pre>
                         <pre><code contenteditable data-trim class="http">
-                            cache-control: public, max-age=31536000
-                            expires: Wed, 02 Nov 2016 15:49:00 GMT
+cache-control: public, max-age=31536000
+expires: Wed, 02 Nov 2016 15:49:00 GMT
                         </code></pre>
                     </li>
                     <li class="fragment">
                         Ohne URL Fingerprinting
                         <pre><code contenteditable data-trim class="nohighlight">
-                            http://bla.de/app/config.json
-                            http://bla.de/views/footer.html
+http://bla.de/app/config.json
+http://bla.de/views/footer.html
                         </code></pre>
                         <pre><code contenteditable data-trim class="http">
-                            cache-control: public, max-age=86400
-                            expires: Wed, 11 Nov 2015 14:55:34 GMT
+cache-control: public, max-age=86400
+expires: Wed, 11 Nov 2015 14:55:34 GMT
                         </code></pre>
                     </li>
                     <li class="fragment">Alle statischen Ressourcen</li>
@@ -429,21 +430,21 @@ Esc: Escape from full-screen, or toggle overview
                     <li class="fragment">
                         Response-Headers:
                         <pre><code contenteditable data-trim class="http">
-                            last-modified: Mon, 05 Oct 2015 10:11:30 GMT
-                            etag: "0rrdr4ruwpoEkjfZ2WTN0BrU83U="
+last-modified: Mon, 05 Oct 2015 10:11:30 GMT
+etag: "0rrdr4ruwpoEkjfZ2WTN0BrU83U="
                         </code></pre>
                     </li>
                     <li class="fragment">
                         Request-Headers:
                         <pre><code contenteditable data-trim class="http">
-                            If-Modified-Since: Mon, 05 Oct 2015 10:11:30 GMT
-                            If-None-Match: "0rrdr4ruwpoEkjfZ2WTN0BrU83U="
+If-Modified-Since: Mon, 05 Oct 2015 10:11:30 GMT
+If-None-Match: "0rrdr4ruwpoEkjfZ2WTN0BrU83U="
                         </code></pre>
                     </li>
                     <li class="fragment">
                         Status Code:
                         <pre><code contenteditable data-trim class="http">
-                            HTTP/1.1 304 Not Modified
+HTTP/1.1 304 Not Modified
                         </code></pre>
                     </li>
                     <li class="fragment">Alle dynamischen Ressourcen</li>
@@ -484,6 +485,8 @@ Esc: Escape from full-screen, or toggle overview
                 <h2>3rd-Party Scripte</h2>
                 <ul>
                     <li class="fragment">Mehr Risiko!</li>
+                    <li class="fragment">async setzen</li>
+                    <li class="fragment">SPOF-Tests</li>
                 </ul>
             </section>
             <section class="hands-on">
@@ -504,12 +507,12 @@ Esc: Escape from full-screen, or toggle overview
                 <h2>HTTP/2</h2>
                 <ul>
                     <li class="fragment">Multiplexed Streams: Die Verbindung wird für verschiedene Inhalte genutzt</li>
-                    <li class="fragment">Eine einzelne Verbindung benötigt nur ein Handshake(SSL/TLS)</li>
-                    <li class="fragment">Domain Shardiding, Concatenation, Image Spriting etc. wird nicht mehr
+                    <li class="fragment">Eine einzelne Verbindung benötigt nur ein Handshake (SSL/TLS)</li>
+                    <li class="fragment">Domain Sharding, Concatenation, Image Spriting etc. wird nicht mehr
                         benötigt
                     </li>
                     <li class="fragment">Server Push: Proaktiv Assets (wie JS and CSS) an den Browser senden</li>
-                    <li class="fragment">Header Compression: Alle Header weren in einem Block als komprimierte Einheit
+                    <li class="fragment">Header Compression: Alle Header werden in einem Block als komprimierte Einheit
                         verschickt
                     </li>
                     <li class="fragment">Binary anstatt textuelles Format: weniger Code, leichteres Parsing auf dem
@@ -524,12 +527,13 @@ Esc: Escape from full-screen, or toggle overview
             <section>
                 <h2>Single Page Applications</h2>
                 <ul>
-                    <li class="fragment">Initialier Download oft schnell aber Rendering erst nach den ersten
+                    <li class="fragment">Weniger Traffic</li>
+                    <li class="fragment">Bessere Usability</li>
+                    <li class="fragment">Initialier Download oft schnell (TTFB) aber Rendering erst nach den ersten
                         AJAX-Requests
                     </li>
                     <li class="fragment">Pre-Rendering auf dem Server</li>
                     <li class="fragment">Skeletons</li>
-                    <li class="fragment">...</li>
                 </ul>
             </section>
             <section>
